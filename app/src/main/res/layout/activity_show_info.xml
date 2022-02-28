@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ShowInfoActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txv_showInfo_title"
+        android:text="@string/title_showInfo"
+        style="@style/title_txv_style"
+        tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txv_nationalCode"
+            style="@style/edt_style.txv"
+            app:layout_constraintTop_toBottomOf="@id/txv_showInfo_title"
+            tools:text = "کد ملی"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txv_bornLocation"
+            style="@style/edt_style.txv"
+            app:layout_constraintTop_toBottomOf="@id/txv_nationalCode"
+            tools:text = "محل تولد "
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txv_address"
+            style="@style/edt_style.txv"
+            app:layout_constraintTop_toBottomOf="@id/txv_bornLocation"
+            tools:text = "آدرس"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txv_postCode"
+            style="@style/edt_style.txv"
+            app:layout_constraintTop_toBottomOf="@id/txv_address"
+            tools:text = "کد پستی"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txv_gender"
+            style="@style/edt_style.txv"
+            app:layout_constraintTop_toBottomOf="@id/txv_postCode"
+            tools:text = "جنسیت"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_editInfo"
+            android:text="@string/editInfo"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txv_gender"
+            style="@style/btn_style" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

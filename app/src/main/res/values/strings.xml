@@ -10,4 +10,6 @@
     <string name="female">زن</string>
     <string name="male">مرد</string>
     <string name="setInfo">ثبت اطلاعات</string>
+    <string name="title_showInfo">مشاهده اطلاعات ثبت شده</string>
+    <string name="editInfo">تغییر اطلاعات</string>
 </resources>

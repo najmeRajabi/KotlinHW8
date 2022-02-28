@@ -12,20 +12,9 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txv_setInfo_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:textStyle="bold"
-        android:textColor="@color/purple_700"
-        android:background="@drawable/corner_txv"
-        android:paddingHorizontal="6dp"
-        android:paddingVertical="3dp"
         android:text="@string/detInfoForm"
-
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/title_txv_style"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edt_name"
@@ -105,16 +94,13 @@
     </RadioGroup>
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:minHeight="50dp"
+        android:id="@+id/btn_saveInfo"
         android:text="@string/setInfo"
-        android:textSize="15sp"
         app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gender_radioG" />
+        app:layout_constraintTop_toBottomOf="@id/gender_radioG"
+        style="@style/btn_style" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
