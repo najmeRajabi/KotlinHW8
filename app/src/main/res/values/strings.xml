@@ -12,4 +12,10 @@
     <string name="setInfo">ثبت اطلاعات</string>
     <string name="title_showInfo">مشاهده اطلاعات ثبت شده</string>
     <string name="editInfo">تغییر اطلاعات</string>
+    <string name="enter_name">لطفا نام و نام خانوادگی خود را وارد کنید!</string>
+    <string name="enterBornLocation">لطفا محل تولد را وارد کنید!</string>
+    <string name="enterNationalCode">لطفا کد ملی را ده رقم وارد کنید!</string>
+    <string name="enterAddress">لطفا آدرس را وارد کنید!</string>
+    <string name="enterPostCode">لطفا کد پستی را صحیح وارد کنید!</string>
+    <string name="chooseGender">لطفا جنسیت را انتخاب کنید!</string>
 </resources>
