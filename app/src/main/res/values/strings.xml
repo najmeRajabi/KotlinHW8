@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Kotlin HW8</string>
+    <string name="detInfoForm">فرم ثبت اطلاعات</string>
+    <string name="nameText">نام و نام خانوادگی*</string>
+    <string name="nationalCode_Text">کد ملی*</string>
+    <string name="bornLocation">محل تولد*</string>
+    <string name="address">آدرس*</string>
+    <string name="postCode">کد پستی*</string>
+    <string name="gender">جنسیت:</string>
+    <string name="female">زن</string>
+    <string name="male">مرد</string>
+    <string name="setInfo">ثبت اطلاعات</string>
 </resources>
