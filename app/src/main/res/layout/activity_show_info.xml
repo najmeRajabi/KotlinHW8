@@ -17,9 +17,16 @@
         tools:ignore="MissingConstraints" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txv_nationalCode"
+            android:id="@+id/txv_name"
             style="@style/edt_style.txv"
             app:layout_constraintTop_toBottomOf="@id/txv_showInfo_title"
+            tools:text = "نام و نام خانوادگی"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txv_nationalCode"
+            style="@style/edt_style.txv"
+            app:layout_constraintTop_toBottomOf="@id/txv_name"
             tools:text = "کد ملی"
             tools:ignore="MissingConstraints" />
 

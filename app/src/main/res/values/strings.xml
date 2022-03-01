@@ -18,4 +18,10 @@
     <string name="enterAddress">لطفا آدرس را وارد کنید!</string>
     <string name="enterPostCode">لطفا کد پستی را صحیح وارد کنید!</string>
     <string name="chooseGender">لطفا جنسیت را انتخاب کنید!</string>
+    <string name="nationalCode">\"کد ملی: \"</string>
+    <string name="postCode_">\"کد پستی: \"</string>
+    <string name="gender_">\"جنسیت: \"</string>
+    <string name="bornL">\"محل تولد: \"</string>
+    <string name="adress_">\"آدرس: \"</string>
+    <string name="name_">\"نام و نام خانوادگی: \"</string>
 </resources>
