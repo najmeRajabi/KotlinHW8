@@ -13,6 +13,7 @@
         <item name="layout_constraintStart_toStartOf">parent</item>
         <item name="layout_constraintEnd_toEndOf">parent</item>
         <item name="android:background">@drawable/stroke_edt</item>
+        <item name="android:maxLines">1</item>
     </style>
 
     <style name="title_txv_style">

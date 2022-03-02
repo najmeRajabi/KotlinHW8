@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">Kotlin HW8</string>
     <string name="detInfoForm">فرم ثبت اطلاعات</string>
-    <string name="nameText">نام و نام خانوادگی*</string>
-    <string name="nationalCode_Text">کد ملی*</string>
-    <string name="bornLocation">محل تولد*</string>
-    <string name="address">آدرس*</string>
-    <string name="postCode">کد پستی*</string>
+    <string name="nameText">نام و نام خانوادگی</string>
+    <string name="nationalCode_Text">کد ملی</string>
+    <string name="bornLocation">محل تولد</string>
+    <string name="address">آدرس</string>
+    <string name="postCode">کد پستی</string>
+    <string name="redStar">*</string>
     <string name="gender">جنسیت:</string>
     <string name="female">زن</string>
     <string name="male">مرد</string>
@@ -18,10 +19,11 @@
     <string name="enterAddress">لطفا آدرس را وارد کنید!</string>
     <string name="enterPostCode">لطفا کد پستی را صحیح وارد کنید!</string>
     <string name="chooseGender">لطفا جنسیت را انتخاب کنید!</string>
-    <string name="nationalCode">\"کد ملی: \"</string>
-    <string name="postCode_">\"کد پستی: \"</string>
-    <string name="gender_">\"جنسیت: \"</string>
-    <string name="bornL">\"محل تولد: \"</string>
-    <string name="adress_">\"آدرس: \"</string>
-    <string name="name_">\"نام و نام خانوادگی: \"</string>
+    <string name="nationalCode">کد ملی: </string>
+    <string name="postCode_">کد پستی: </string>
+    <string name="gender_">جنسیت: </string>
+    <string name="bornL">محل تولد: </string>
+    <string name="adress_">آدرس: </string>
+    <string name="name_">نام و نام خانوادگی: </string>
+    <string name="btn_newUser_text">ورود کاربر جدید</string>
 </resources>

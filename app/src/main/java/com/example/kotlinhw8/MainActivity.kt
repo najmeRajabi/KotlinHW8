@@ -23,19 +23,47 @@ class MainActivity : AppCompatActivity() {
     var bornLocation :String = ""
     var postCode :String = ""
     lateinit var gender:Gender
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
+        checkInfoExist()
+        addStarToHint()
         binding.btnSaveInfo.setOnClickListener {
             if(checkInfo()){
                 initFiled()
                 saveInfo()
-                gotoShoInfoActivity()
+                gotoShowInfoActivity()
             }
         }
+    }
+
+    private fun checkInfoExist() {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("InfoSharedPreference", Context.MODE_PRIVATE)
+        if (!sharedPreferences.getString(NAME,"").isNullOrBlank()){
+            binding.edtName.setText(setInfoInEdt(NAME))
+            binding.edtAddress.setText(setInfoInEdt(ADDRESS))
+            binding.edtBornLocation.setText(setInfoInEdt(BORNLOCATION))
+            binding.edtNationalCode.setText(setInfoInEdt(NATIONALCODE))
+            binding.edtPostCode.setText(setInfoInEdt(POSTCODE))
+            gotoShowInfoActivity()
+        }
+    }
+
+    private fun setInfoInEdt(field:String):String? {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("InfoSharedPreference", Context.MODE_PRIVATE)
+        return sharedPreferences.getString(field,"")
+    }
+
+    private fun addStarToHint() {
+        var star = getString(R.string.redStar)
+
+//        binding.edtName.currentHintTextColor = getColor(R.color.red)
     }
 
     private fun initFiled() {
@@ -46,9 +74,9 @@ class MainActivity : AppCompatActivity() {
         postCode= binding.edtPostCode.text.toString()
 
         if (binding.femaleCheckBtn.isChecked){
-            gender = Gender.Female
+            gender = Gender.زن
         }else if (binding.maleCheckBtn.isChecked){
-            gender= Gender.Male
+            gender= Gender.مرد
         }
     }
 
@@ -65,8 +93,8 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
     }
 
-    private fun gotoShoInfoActivity() {
-        var intent = Intent(this,ShowInfoActivity::class.java)
+    private fun gotoShowInfoActivity() {
+        val intent = Intent(this,ShowInfoActivity::class.java)
         startActivity(intent)
     }
 
@@ -103,5 +131,5 @@ class MainActivity : AppCompatActivity() {
 }
 
 enum class Gender{
-    Female , Male
+    زن , مرد
 }
