@@ -3,8 +3,12 @@ package com.example.kotlinhw8
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
 import androidx.core.text.isDigitsOnly
 import com.example.kotlinhw8.databinding.ActivityMainBinding
 
@@ -30,8 +34,10 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        initView()
         checkInfoExist()
-        addStarToHint()
+
+
         binding.btnSaveInfo.setOnClickListener {
             if(checkInfo()){
                 initFiled()
@@ -39,6 +45,15 @@ class MainActivity : AppCompatActivity() {
                 gotoShowInfoActivity()
             }
         }
+    }
+
+    private fun initView() {
+        binding.edtName.setHint(addStarToHint(getString(R.string.nameText)))
+        binding.edtAddress.setHint(addStarToHint(getString(R.string.address)))
+        binding.edtBornLocation.setHint(addStarToHint(getString(R.string.bornLocation)))
+        binding.edtNationalCode.setHint(addStarToHint(getString(R.string.nationalCode_Text)))
+        binding.edtPostCode.setHint(addStarToHint(getString(R.string.postCode)))
+        binding.genderTxv.setText(addStarToHint(getString(R.string.gender)))
     }
 
     private fun checkInfoExist() {
@@ -50,6 +65,12 @@ class MainActivity : AppCompatActivity() {
             binding.edtBornLocation.setText(setInfoInEdt(BORNLOCATION))
             binding.edtNationalCode.setText(setInfoInEdt(NATIONALCODE))
             binding.edtPostCode.setText(setInfoInEdt(POSTCODE))
+            if (setInfoInEdt(GENDER)== Gender.زن .toString()){
+                binding.femaleCheckBtn.isChecked = true
+            }else{
+                binding.maleCheckBtn.isChecked = true
+            }
+
             gotoShowInfoActivity()
         }
     }
@@ -60,10 +81,13 @@ class MainActivity : AppCompatActivity() {
         return sharedPreferences.getString(field,"")
     }
 
-    private fun addStarToHint() {
+    private fun addStarToHint(hint:String): SpannableStringBuilder {
         var star = getString(R.string.redStar)
+        val builder = SpannableStringBuilder(hint+star)
+        builder.setSpan(ForegroundColorSpan(Color.RED),hint.length,
+            builder.length,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        return builder
 
-//        binding.edtName.currentHintTextColor = getColor(R.color.red)
     }
 
     private fun initFiled() {
