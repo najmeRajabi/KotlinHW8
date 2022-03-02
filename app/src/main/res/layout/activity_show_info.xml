@@ -67,6 +67,15 @@
             app:layout_constraintTop_toBottomOf="@id/txv_gender"
             style="@style/btn_style" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_newUser"
+            android:text="@string/btn_newUser_text"
+            app:cornerRadius="5dp"
+            android:backgroundTint="@color/purple_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_editInfo"
+            style="@style/btn_style" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

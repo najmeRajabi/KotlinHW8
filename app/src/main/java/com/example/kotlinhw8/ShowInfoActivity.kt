@@ -2,6 +2,7 @@ package com.example.kotlinhw8
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -29,6 +30,21 @@ class ShowInfoActivity : AppCompatActivity() {
         gender = getFromShared(GENDER)
 
         setInfo()
+
+        binding.btnEditInfo.setOnClickListener { edit() }
+        binding.btnNewUser.setOnClickListener { newUser() }
+    }
+
+    private fun newUser() {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("InfoSharedPreference", Context.MODE_PRIVATE)
+        sharedPreferences.edit().clear().apply()
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun edit() {
+        finish()
     }
 
     @SuppressLint("SetTextI18n") /// .... این رو لطفا توضیح بدین
