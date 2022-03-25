@@ -119,6 +119,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun gotoShowInfoActivity() {
         val intent = Intent(this,ShowInfoActivity::class.java)
+//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
 
